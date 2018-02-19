@@ -1,22 +1,33 @@
 var NUM_CIRCLES = 12;
+var circleDiameter;
+var circleRadius;
 
 function setup() {
     createCanvas(480, 600);
-    circleDiameter = width/NUM_CIRCLES
+    circleDiameter = width/NUM_CIRCLES;
+    circleRadius = circleDiameter/2;
 }
 
-function draw() { 
+function draw() {
+    var isShifted = false;
+    
     var y = 0;
     while (y <= height) {
+        
+    var x;
     
-    
-    var x = 0;
+    if (isShifted) {
+        
+    } else {
+        
+    }
     while (x <= width) {
         ellipse(x, 0, circleDiameter, circleDiameter);
         x = x + circleDiameter;
       }
 
-    y = y + circleDiameter;
+    y = y + circleRadius;
+    isShifted = !isShifted;
   }
 }
 
